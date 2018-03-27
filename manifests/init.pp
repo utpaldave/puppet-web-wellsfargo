@@ -44,5 +44,22 @@
 #
 class web {
 
+	package { 'web software':
+	ensure => present,
+	name   => 'httpd',
+	}
 
+	file { 'deploy web page':
+	ensure => file,
+	path => '/var/www/html/index.html',
+	source => 'puppet:///modules/web/index.html',
+	owner => 'apache',
+	mode => '0644',
+	}
+
+	service { 'web services':
+	ensure => running,
+	name => 'httpd',
+	enable => true,
+	}
 }
