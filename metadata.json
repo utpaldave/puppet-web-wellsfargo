@@ -1,0 +1,18 @@
+{
+  "name": "utpal-web",
+  "version": "0.1.0",
+  "author": "Utpal Dave <utpaldave@aol.in>",
+  "summary": "This is test module for web services deployment",
+  "license": "Apache-2.0",
+  "source": "https://github.com/utpaldave/puppet-web-wellsfargo.git",
+  "project_page": "https://github.com/utpaldave/puppet-web-wellsfargo",
+  "issues_url": "https://github.com/utpaldave/puppet-web-wellsfargo/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ],
+  "data_provider": null
+}
+
