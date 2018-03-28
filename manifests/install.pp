@@ -1,6 +1,12 @@
-class web::install {
+class web::install(
+
+$local_package_name = $::web::class_package_name,
+
+) {
+
 	package { 'web software':
 		ensure => present,
-		name   => 'httpd',
+		name   => $local_package_name,
 	}
+
 }

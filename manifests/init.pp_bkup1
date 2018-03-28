@@ -46,17 +46,13 @@ class web(
 
 	$class_package_name = $::web::params::package_name,
 	$class_service_name = $::web::params::service_name,
-	$class_server_ip    = $::web::params::serverip,
+	$class_server_ip    = $::web::params::server_ip,
 
 ) inherits ::web::params{
 
 #	class {'web::params': }
 	class {'web::install': }
-	class {'web::docroot': }
-	class {'web::webconf': }
 	class {'web::webdeploy': }
 	class {'web::service': }
-
-Class['web::install']  -> Class['web::docroot'] -> Class['web::webconf'] -> Class['web::webdeploy'] ->  Class['web::service']
 
 }
